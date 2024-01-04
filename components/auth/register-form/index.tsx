@@ -1,28 +1,21 @@
 "use client";
 import * as z from "zod";
 import React from "react";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
 
 import { CardWrapper, FormMsgError, FormMsgSuccess, CustomField } from "@/components/auth";
 import { Form, Button } from "@/components/ui";
-import { RegisterProps, RegisterSchema } from "@/app/schemas/register";
+import { RegisterSchema } from "@/app/schemas/register";
 import { fieldConfigs } from "./fields-config";
+import { useZodForm } from "../useZodForm";
 import { register } from "@/app/actions";
 
 export const RegisterForm = () => {
-  const [isPending, startTransition] = React.useTransition();
-  const [error, setError] = React.useState<string | undefined>();
-  const [success, setSuccess] = React.useState<string | undefined>();
-
-  const form = useForm<RegisterProps>({
-    resolver: zodResolver(RegisterSchema),
-    defaultValues: {
-      email: "",
-      password: "",
-      name: ''
-    },
-  });
+  const { form, error, setError, success, setSuccess, isPending, startTransition } = useZodForm(RegisterSchema, {
+    email: "",
+    password: "",
+    name: ""
+  }
+);
 
   const handleSubmit = (values: z.infer<typeof RegisterSchema>) => {
     setSuccess("");
@@ -39,7 +32,7 @@ export const RegisterForm = () => {
   return (
     <CardWrapper
       headerLabel='Create an account'
-      backBtnLabel="already have an account?"
+      backBtnLabel='already have an account?'
       backBtnHref='/auth/login'
       showSocial
     >
