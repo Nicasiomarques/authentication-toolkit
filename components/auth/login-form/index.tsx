@@ -1,27 +1,21 @@
 "use client";
 import * as z from "zod";
 import React from "react";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
 
 import { CardWrapper, FormMsgError, FormMsgSuccess, CustomField } from "@/components/auth";
 import { Form, Button } from "@/components/ui";
-import { LoginProps, LoginSchema } from "@/app/schemas/login";
+import { LoginSchema } from "@/app/schemas/login";
 import { fieldConfigs } from "./fields-config";
 import { login } from "@/app/actions";
+import { useZodForm } from "../useZodForm";
+
 
 export const LoginForm = () => {
-  const [isPending, startTransition] = React.useTransition();
-  const [error, setError] = React.useState<string | undefined>();
-  const [success, setSuccess] = React.useState<string | undefined>();
-
-  const form = useForm<LoginProps>({
-    resolver: zodResolver(LoginSchema),
-    defaultValues: {
+  const { form, error, setError, success, setSuccess, isPending, startTransition } = useZodForm(LoginSchema, {
       email: "",
       password: "",
-    },
-  });
+    }
+  );
 
   const handleSubmit = (values: z.infer<typeof LoginSchema>) => {
     setSuccess("");
