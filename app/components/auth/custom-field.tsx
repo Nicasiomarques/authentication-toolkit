@@ -1,4 +1,4 @@
-import { FormControl, FormField, FormItem, FormLabel, FormMessage, Input } from "@/components/ui";
+import { FormControl, FormField, FormItem, FormLabel, FormMessage, Input } from "@/app/components/ui";
 
 type CustomFieldProps = {
   control: any;

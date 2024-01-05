@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui";
-import { BackButton, Social } from "@/components/auth";
+import { Card, CardContent, CardFooter, CardHeader } from "@/app/components/ui";
+import { BackButton, Social } from "@/app/components/auth";
 
 type CardWrapperProps = {
   children: React.ReactNode;
