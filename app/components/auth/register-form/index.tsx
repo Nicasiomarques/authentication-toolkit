@@ -2,8 +2,8 @@
 import * as z from "zod";
 import React from "react";
 
-import { CardWrapper, FormMsgError, FormMsgSuccess, CustomField } from "@/components/auth";
-import { Form, Button } from "@/components/ui";
+import { CardWrapper, FormMsgError, FormMsgSuccess, CustomField } from "@/app/components/auth";
+import { Form, Button } from "@/app/components/ui";
 import { RegisterSchema } from "@/app/schemas/register";
 import { fieldConfigs } from "./fields-config";
 import { useZodForm } from "../useZodForm";

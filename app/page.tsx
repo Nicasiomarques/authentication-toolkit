@@ -1,5 +1,5 @@
-import { LoginButton } from "@/components/auth/login-button";
-import { Button } from "@/components/ui/button";
+import { LoginButton } from "@/app/components/auth/login-button";
+import { Button } from "@/app/components/ui/button";
 
 export default function Home() {
   return (

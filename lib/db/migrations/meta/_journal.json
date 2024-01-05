@@ -1,0 +1,55 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1704402210731,
+      "tag": "0000_harsh_triathlon",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1704407646885,
+      "tag": "0001_crazy_gideon",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1704411856866,
+      "tag": "0002_magical_eddie_brock",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1704412127472,
+      "tag": "0003_tranquil_zeigeist",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1704412308328,
+      "tag": "0004_sloppy_skreet",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1704412391938,
+      "tag": "0005_adorable_the_professor",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1704412466416,
+      "tag": "0006_amused_lily_hollister",
+      "breakpoints": true
+    }
+  ]
+}
